@@ -1,47 +1,50 @@
 body {
   font-family: 'Segoe UI', sans-serif;
-  background-color: #f0f8ff;
+  background-color: #e8f1fb; /* azul muy suave */
   padding: 20px;
-  color: #003366;
+  color: #033959; /* azul oscuro para textos */
 }
 
 h1 {
   text-align: center;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
+  color: #015a8a;
 }
 
 #malla {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .materia {
-  background-color: #cce5ff;
-  border: 2px solid #99c2ff;
-  border-radius: 8px;
-  padding: 12px;
-  width: 180px;
+  background-color: #d2e8fd; /* azul claro */
+  border: 2px solid #a0cfff;
+  border-radius: 10px;
+  padding: 15px;
   text-align: center;
   cursor: pointer;
-  transition: all 0.3s;
-  user-select: none;
+  transition: transform 0.2s, background-color 0.3s, box-shadow 0.3s;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .materia:hover {
-  background-color: #b3d9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  background-color: #b6dbfc;
 }
 
 .materia.aprobada {
-  background-color: #3399ff;
+  background-color: #368ee0; /* azul medio más intenso */
   color: white;
-  border-color: #0073e6;
+  border-color: #236ab0;
 }
 
 .materia.bloqueada {
-  background-color: #e6f0ff;
-  color: #999;
+  background-color: #f0f5fb;
+  color: #9bbcdc;
   border-style: dashed;
   cursor: not-allowed;
 }
